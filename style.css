@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: #2b74af;
+  color: white;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  font-family: "Press Start 2P", system-ui;
+  text-align: center;
+  font-size: 4vmin;
+  padding-inline: 2em;
+  line-height: 1.5em;
+}
+
+.playBtn {
+  font-size: 0.8em;
+  padding: 0.5em 1.5em;
+  background-color: #ffffffbb;
+  color: #2b74af;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.playBtn:hover {
+  background-color: #ffffffdd;
+}
+
+.playBtn:active {
+  background-color: #ffffff;
+  scale: 0.95;
+}
+
+.row {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.row > div {
+  height: 7em;
+  width: 7em;
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.4em;
+}
+
+.row p {
+  font-size: 0.6em;
+}
+
+.row img {
+  width: 4em;
+}
+
+.row > div:hover {
+  background-color: #ffffff;
+  color: #2b74af;
+}
+
+@media only screen and (orientation: portrait) {
+  .row {
+    flex-direction: column;
+  }
+}
