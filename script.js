@@ -83,20 +83,20 @@ function addInsect() {
   const insect = document.createElement("img");
   insect.className = "insect";
   insect.src = insectsUrl;
-  const height = Math.floor(Math.random() * (window.innerHeight - 50));
-  const width = Math.floor(Math.random() * (window.innerWidth - 50));
+  const height = Math.random() * (window.innerHeight - 200) + 100;
+  const width = Math.random() * (window.innerWidth - 200) + 100;
   insect.style.top = height + "px";
   insect.style.left = width + "px";
   insect.style.transform = `rotate(${Math.floor(Math.random() * 360)}deg)`;
   insect.addEventListener("click", () => {
     score++;
     insect.classList.add("catched");
-    for (let i = 0; i < 2; i++) {
-      addInsect();
-    }
+
+    setTimeout(addInsect, 500);
+    setTimeout(addInsect, 1000);
   });
   main.appendChild(insect);
-  if (score > 20) {
+  if (score === 20) {
     const alertElem = document.createElement("div");
     alertElem.className = "alert";
     alertElem.innerHTML = `<p>Are you annoyed yet?</p>

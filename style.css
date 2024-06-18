@@ -96,7 +96,7 @@
 
 .alert {
   width: 100dvw;
-
+  pointer-events: none;
   background-color: #0b0191;
   color: white;
   position: absolute;
